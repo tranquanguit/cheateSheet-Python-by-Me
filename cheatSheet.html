@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="cheatSheet.css">
+    </head>
+    <body>
+        <div class="Container">
+            <div class="page">
+                <div class="left">
+                    <div class="content">
+                        <h2>What is Python?</h2>
+                        <p>Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.</p>
+                        <ul> It is used for:
+                            <li>web development (server-side)</li>
+                            <li>software development</li>
+                            <li>mathematics</li>
+                            <li>system scripting</li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <h2>Python Install</h2>
+                        <p>To check if you have python installed, run the following on the Command Line (cmd.exe):</p>
+                        <ol>
+                            <li>Windows + R</li>
+                            <li>Write "cmd" + Enter</li>
+                            <li>Enter: python --version</li>
+                        </ol>
+                        <p>If you find that you do not have Python installed on your computer, then you can download it for free from the following website: 
+                            <a href="https://www.python.org/">https://www.python.org/</a>
+                        </p>
+                    </div>
+                    <div class="content">
+                        <h2>Python Syntax</h2>
+                        <p>Creating a python file on the server, using the .py file extension, and running it in the Command Line:</p>
+                        <p class="syntax">python myfile.py</p>
+                        <p class="note">Note: We recommend using an IDE to practice Python: 
+                            <a href="https://code.visualstudio.com/">Visual studio Code</a>, <a href="https://www.jetbrains.com/pycharm/">Pycharm</a>, ...</p>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="content">
+                        <h2>Python Indentation</h2>
+                        <p><strong>Indentation</strong> refers to the spaces at the beginning of a code line, the indentation in Python is very important.</p>
+                        <p>Python uses indentation to indicate a block of code, Python will give you an error if you skip the indentation.</p>
+                        <p class="note">The number of spaces is up to you as a programmer, the most common use is four, but it has to be at least one. 
+                            You have to use the same number of spaces in the same block of code, otherwise Python will give you an error.
+                        </p>
+                    </div>
+                    <div class="content">
+                        <h2>Python Comments</h2>
+                        <p><strong>Comments</strong> starts with a 
+                            <span class="special-characters"> #</span>, and Python will ignore them:
+                        </p>
+                        <p class="syntax">
+                            <span class="comment">#This is a comment</span><br>
+                            print("Hello, World!")
+                        </p>
+                        <p>or multiline comment</p>
+                        <p class="syntax">
+                            """<br>
+                            This is a comment<br>
+                            written in<br>
+                            more than just one line<br>
+                            """<br>
+                            print("Hello, World!")
+                        </p>
+                        <p class="note">Since Python will ignore string literals that are not assigned to a variable, 
+                            you can add a multiline string (triple quotes) in your code, and place your comment inside it</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="content">
+                        <h2>Variables</h2>
+                        <p><strong>Creating Variables: </strong>Python has no command for declaring a variable. A variable is created the moment you first assign a value to it.</p>
+                        <p class="syntax">
+                            x = 5<br>
+                            y = "John"<br>
+                            print(x)<br>
+                            print(y)<br>
+                            <span class="comment">
+                                #output: <br>
+                                5<br>
+                                John
+                            </span>
+                        </p>
+                        <p>Variables do not need to be declared with any particular type, and can even change type after they have been set.</p>
+                        <p class="syntax">
+                            x = 4 <span class="comment"># x is of type integer</span><br>
+                            x = "Sally" <span class="comment"> # x is now of type string</span><br>
+                            print(x) <br>
+                            <span class="comment">
+                                #output: <br>
+                                Sally
+                            </span>
+                        </p>
+                        
+                        <p><strong>Casting: </strong>If you want to specify the data type of a variable, this can be done with casting.</p>
+                        <p class="syntax">
+                            x = str(3)   <span class="comment"># x will be '3'</span> <br>
+                            y = int(3)   <span class="comment"># y will be 3</span> <br>
+                            z = float(3) <span class="comment"># z will be 3.0</span> <br>
+                        </p>
+                        <ul class="note"> Note:
+                            <li>String variables can be declared either by using single or double quotes:</li>
+                            <li>Variable names are case-sensitive.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page">
+                <div class="left">
+                    <div class="content">
+                        <h2>Variables con't</h2>
+                        <p><strong>Many Values to Multiple Variables: </strong>Python allows you to assign values to multiple variables in one line:</p>
+                        <p class="syntax">
+                            x, y, z = "Orange", "Banana", "Cherry"
+                        </p>
+                        <p><strong>One Value to Multiple Variables: </strong>You can assign the same value to multiple variables in one line:</p>
+                        <p class="syntax">
+                            x = y = z = "Orange"
+                        </p>
+                        <p><strong>Unpack a Collection: </strong>If you have a collection of values in a list, tuple etc. Python allows you to extract the values into variables. This is called unpacking.</p>
+                        <p class="syntax">
+                            fruits = ["apple", "banana", "cherry"] <br>
+                            x, y, z = fruits
+                        </p>
+                        <p><strong>Output Variables: </strong>The Python <span class="special-characters">print()</span> function is often used to output variables.</p>
+                        <p class="syntax">
+                            x = "Python is awesome" <br>
+                            print(x) <br>
+                            <span class="comment">
+                                # print multiple variable: <br>
+                            </span>
+                                print(x, y, z) <br>
+                            <span class="comment">
+                                # You can also use the <span class="special-characters">+</span> operator to output multiple variables: <br>
+                            </span>
+                                print(x + y + z)
+                        </p>
+                        <p>For numbers, the <span class="special-characters">+</span> character works as a mathematical operator:</p>
+                        <p class="syntax">
+                            x = 5 <br>
+                            y = 10 <br>
+                        </p>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="content">
+                        <p class="syntax">
+                            print(x + y) <br>
+                            <span class="comment">
+                                # output: <br>
+                                15
+                            </span>
+                        </p>
+                        <ul class="note"> Note:
+                            <li>In the <span class="special-characters">print()</span> function, when you try to combine a string and a number with the + operator, Python will give you an error.</li>
+                            <li>The best way to output multiple variables in the <span class="special-characters">print()</span> function is to separate them with commas, which even support different data types.</li>
+                        </ul>
+
+                        <p><strong>Global Variables: </strong>
+                            Variables that are created outside of a function are known as global variables.
+                            Global variables can be used by everyone, both inside of functions and outside.
+                        </p>
+                        <p class="syntax"> 
+                            <span class="comment">Create a variable outside of a function, and use it inside the function:</span> <br>
+                            x = "awesome"<br>
+                            <br>
+                            def myfunc(): <br>
+                            &ensp;print("Python is " + x) <br>
+                            <br>
+                            myfunc() <br>
+                            <span class="comment">
+                                # output: <br>
+                                Python is awesome
+                            </span>
+                        </p>
+
+                        <p>If you create a variable with the same name inside a function, this variable will be local, 
+                            and can only be used inside the function. 
+                            The global variable with the same name will remain as it was, global and with the original value.</p>
+                        <p class="syntax"> 
+                            <span class="comment">Create a variable inside a function, with the same name as the global variable:</span> <br>
+                            x = "awesome"<br>
+                            <br>
+                        </p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="content">
+                        <p class="syntax"> 
+                            def myfunc(): <br>
+                            &ensp;x = "fantastic" <br>
+                            &ensp;print("Python is " + x) <br>
+                            <br>
+                            myfunc() <br>
+                            print("Python is " + x) <br>
+                            <span class="comment">
+                                # output: <br>
+                                Python is fantastic <br>
+                                Python is awesome
+                            </span>
+                        </p>
+
+                        <p><strong>The global Keyword: </strong>Normally, when you create a variable inside a function, that variable is local, 
+                            and can only be used inside that function.
+                            To create a global variable inside a function, you can use the <span class="special-characters">global</span> keyword.</p>
+                        <p class="syntax">
+                            def myfunc(): <br>
+                            &ensp;global x <br>
+                            &ensp;x = "fantastic" <br>
+                            <br>
+                            myfunc() <br>
+                            print("Python is " + x) <br>
+                            <span class="comment">
+                                # output: <br>
+                                Python is fantastic
+                            </span>
+                        </p>
+
+                        <p>Also, use the global keyword if you want to change a <span class="special-characters">global</span> variable inside a function.</p>
+                        <p class="syntax"> 
+                            x = "awesome"<br>
+                            def myfunc(): <br>
+                            &ensp; global x <br>
+                            &ensp; x = "fantastic" <br>
+                            <br>
+                            myfunc() <br>
+                            print("Python is " + x) <br>
+                            <span class="comment">
+                                # output: <br>
+                                Python is fantastic
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page">
+                <div class="left">
+                    <div class="content">
+                        <h2>Data Types</h2>
+                        <p><strong>Built-in Data Types: </strong> Python has the following data types built-in by default, in these categories:
+                            <ul>
+                                <li>Text: <span class="special-characters">str</span></li>
+                                <li>Numeric: 
+                                    <span class="special-characters">int</span>,
+                                    <span class="special-characters"> float</span>,
+                                    <span class="special-characters"> complex</span>
+                                </li>
+                                <li>Sequence: 
+                                    <span class="special-characters">list</span>,
+                                    <span class="special-characters"> tuple</span>,
+                                    <span class="special-characters"> range</span></li>
+                                <li>Mapping: <span class="special-characters">dict</span></li>
+                                <li>Set: 
+                                    <span class="special-characters">set</span>,
+                                    <span class="special-characters"> frozenset</span>
+                                </li>
+                                <li>Boolean: <span class="special-characters">bool</span></li>
+                                <li>Binary:
+                                    <span class="special-characters">bytes</span>,
+                                    <span class="special-characters"> bytearray</span>,
+                                    <span class="special-characters"> memoryview</span></li>
+                                </li>
+                                <li>None: <span class="special-characters">NoneType</span></li>
+                            </ul>
+                        </p>
+
+                        <div class="content">
+                            <h2>If ... Else</h2>
+                            <p><strong>Python Conditions and If statements: </strong>Python supports the usual logical conditions from mathematics:</p>
+                            <ul>
+                                <li>Equals: <span class="special-characters"> a == b </span></li>
+                                <li>Not Equals: <span class="special-characters"> a != b </span></li>
+                                <li>Less than: <span class="special-characters"> a < b </span></li>
+                                <li>Less than or equal to: <span class="special-characters"> a <= b </span></li>
+                                <li>Greater than: <span class="special-characters"> a > b </span></li>
+                                <li>Greater than or equal to: <span class="special-characters"> a >= b </span></li>
+                            </ul>
+                            <p>These conditions can be used in several ways, most commonly in "if statements" and loops.
+                                An "if statement" is written by using the if keyword:
+                            </p>
+                            <p class="syntax">
+                                a = 10 <br>
+                                b = 20 <br>
+                                if a <= b: <br>
+                                &ensp;print("number a less than or equal to number b"); <br>
+                                <span class="comment">
+                                    # output: <br>
+                                    number a less than or equal to number b
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="content">
+                        <p><strong>Elif: </strong>The <span class="special-characters">elif</span> keyword is Python's way of saying 
+                            "if the previous conditions were not true, then try this condition".
+                        </p>
+                        <p class="syntax">
+                            a = 10 <br>
+                            b = 10 <br>
+                            if a < b: <br>
+                            &ensp;print("number a less than to number b") <br>
+                            elif a == b: <br>
+                            &ensp;print("number a equal to number b") <br>
+                            <span class="comment">
+                                # output: <br>
+                                number a equal to number b
+                            </span>
+                        </p>
+
+                        <p><strong>Else: </strong>The <span class="special-characters">else</span> keyword catches anything which isn't caught by the preceding conditions.</p>
+                        <p class="syntax">
+                            a = 30 <br>
+                            b = 20 <br>
+                            if a < b: <br>
+                            &ensp;print("number a less than or equal to number b") <br>
+                            elif a == b:<br>
+                            &ensp;print("number a equal to number b") <br>
+                            else: <br>
+                            &ensp;print("number a greater than to number b") <br>
+                            <span class="comment">
+                                # output: <br>
+                                number a greater than to number b
+                            </span>
+                        </p>
+
+                        <p class="note">Can you lean more about: If...else short hand, Ternary Operators, Conditional Expressions. Or keywords: and, or, not, Nested If, ...</p>
+                        <p class="syntax">
+                            a = 30 <br>
+                            b = 20 <br>
+                            c = 10 <br>
+                            print("A") if a > b and a > c elif b > c or a == c print("B") else print("C")
+                        </p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="content">
+                        <h2>While Loops</h2>
+                        <p><strong>While Loop: </strong>With the while loop we can execute a set of statements as long as a condition is true.</p>
+                        <p class="syntax">
+                            i = 1 <br>
+                            while i < 6: <br>
+                            &ensp; print(i) <br>
+                            &ensp; i += 1 <br>
+                            <span class="comment">
+                                # output: <br>
+                                12345
+                            </span>
+                        </p>
+                        <p class="note"><strong>Note:</strong> remember to increment i, or else the loop will continue forever.</p>
+
+                        <p><strong>The break Statement: </strong>With the <span class="special-characters">break</span> statement we can stop the loop even if the while condition is true:</p>
+                        <p class="syntax">
+                            i = 1 <br>
+                            while i < 6: <br>
+                            &ensp; print(i) <br>
+                            &ensp;if i == 4: <br>
+                            &ensp; &ensp; break <br>
+                            &ensp; i += 1 <br>
+                            <span class="comment">
+                                # output: <br>
+                                1234
+                            </span>
+                        </p>
+
+                        <p><strong>Some other keywords: </strong></p>
+                        <ul>
+                            <li><span class="special-characters">continue:</span> With the continue statement we can stop the current iteration, and continue with the next.</li>
+                            <li><span class="special-characters">else: </span> With the else statement we can run a block of code once when the condition no longer is true.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page">
+                <div class="left">
+                    <div class="content">
+                        <h2>For loops</h2>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="center"></div>
+                <div class="right"></div>
+            </div>
+
+            <div class="page">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+            </div>
+
+            <div class="page">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+            </div>
+
+            <div class="page">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+            </div>
+        </div>
+    </body>
+</html>
